@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Navbar with Mobile Dropdown</title>
+  <!-- DM Sans Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    
+  />
+  <link rel="stylesheet" href="css/index.css">
+ 
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Logo always on left -->
+      <div class="logo">
+        <a href="#">
+          <!-- Replace with your actual logo image -->
+          <img src="images/logo.svg" alt="Site Logo" />
+         
+        </a>
+	<span>AGRO-TECH NEPAL</span>
+      </div>
+      <!-- Desktop Navigation (visible on wider screens) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#">Categories</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-user m10"></i> Login</a>
+          </li>
+          <li>
+            <a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Mobile Navigation Controls (visible on mobile) -->
+      <div class="mobile-nav-toggle">
+        <a href="#" class="mobile-search" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+        <a href="#" class="mobile-menu" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-dropdown">
+      <ul>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">
+           
+            <i class="fa-solid fa-user"></i>
+            </a>
+        
+      </ul>
+    </div>
+  </header>
+
+  <main  >
+  <div class="container">
+        <div class="first-container">
+        <h1> Connecting <span>Farmers and Comapanies </span>Directly</h1>
+        <div class="buttom1"> <img src="images/farmer.svg" class="f-icon"> <button class="button1">Join as a farmer</button></div>
+        
+         </div>
+    
+    <div class="second-container">
+       
+        <p>Aims to establish a direct link between farmers and companies,<br>
+            eliminating intermediaries and creating a more efficient and <br>
+            equitable marketplace.</p>
+            <div class="buttom2"><img src="images/comapany.svg" class="c-icon">
+              <button class="button1">Join as a company</button></div>
+            </div>
+        </div>
+      </div>
+      <h1  class="feature-heading"> Features Overview</h1>
+     
+      <div class="main-features">
+        
+        <div class="feature f1">
+          <i class="fa-solid fa-handshake"></i>
+          <span>Direct Trade</span>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-money-check-dollar"></i>
+          <span>Secure Payments</span>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-truck"></i>
+          <span>Logistics support</span>
+        </div>
+      </div>
+  </main>
+
+
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu');
+      const mobileDropdown = document.querySelector('.mobile-dropdown');
+
+      mobileMenuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Toggle the dropdown's max-height for a smooth animation
+        if (mobileDropdown.style.maxHeight && mobileDropdown.style.maxHeight !== "0px") {
+          mobileDropdown.style.maxHeight = "0";
+          mobileMenuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        } else {
+          mobileDropdown.style.maxHeight = mobileDropdown.scrollHeight + "px";
+          mobileMenuToggle.innerHTML = '<i class="fa-solid fa-times"></i>';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

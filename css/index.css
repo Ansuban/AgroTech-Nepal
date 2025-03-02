@@ -1,0 +1,226 @@
+ /* Basic reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ .m10{
+    margin:10px;
+ }
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    /* Prevent content from being hidden under the fixed header */
+    padding-top: 70px;
+  }
+  .container{
+    margin-top: 200px;
+  }
+  .first-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .first-container h1{
+    font-size: 85px;
+  }
+  .f-icon{
+    height: 250px;
+  }
+  .first-container span{
+    font-size: 65px;
+    color: rgba(92, 123, 54, 1);
+  }
+  .buttom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .button1{
+    background-color: rgba(46, 58, 30, 1);
+    color:white;
+    font-size: 25px;
+    height:40px;
+    opacity: 1;
+    border: none;
+    border-radius:50px;
+    /* padding: 7px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 20px;
+    margin-top: 10px;
+    }
+  .buttom2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left:260px;
+    margin-top:30px;
+  }
+    
+  .second-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .second-container p{
+    text-align: justify;
+    font-size: 20px;
+    margin-top:-50px;
+    margin-left:70px;
+  }
+  .c-icon{
+    height: 150px;
+   margin-left:20px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+   
+  }
+  /* Header container for both desktop and mobile */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width:1200px;
+    margin:0 auto;
+    background-color: #000;
+  }
+
+
+.logo {
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.logo span{
+font-size:50px;
+align-items:center;
+
+text-decoration:none;
+
+}
+  /* Logo styling */
+  .logo img {
+    max-height: 100px;
+  }
+  /* Desktop navigation (visible on larger screens) */
+  .desktop-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .desktop-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    gap:10px;
+  }
+  .desktop-nav ul li a:hover {
+    color: #ccc;
+  }
+  /* Mobile navigation toggle container (visible on mobile only) */
+  .mobile-nav-toggle {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+  }
+  .mobile-nav-toggle a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  .mobile-nav-toggle a:hover {
+    color: #ccc;
+  }
+  /* Mobile dropdown menu styling */
+  .mobile-dropdown {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+  }
+  .mobile-dropdown ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-dropdown ul li {
+    border-top: 1px solid #333;
+  }
+  .mobile-dropdown ul li a {
+    display: block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  .mobile-dropdown ul li a:hover {
+    color: #ccc;
+  }
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    /* Hide desktop nav on mobile */
+    .desktop-nav {
+      display: none;
+    }
+    /* Show mobile nav toggles */
+    .mobile-nav-toggle {
+      display: flex;
+    }
+    /* Adjust header container */
+    .header-container {
+      justify-content: space-between;
+    }
+  }
+
+
+main{
+max-width:1200px;
+margin:0 auto;
+position:relative;
+top:40px;
+}
+.main-features{
+  margin-top: 50px;
+  display: flex;
+justify-content: center;
+ gap: 50px;
+}
+.feature{
+  
+  height: auto;
+  padding: 80px;
+  width:auto;
+  font-size: 80px;
+  color:rgb(0, 0, 0);
+  background-color: rgb(253, 255, 253);
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  gap:10px;
+}
+.f1{
+  padding-left: 90px;
+  padding-right: 90px;
+}
+.feature span{
+  display: block;
+font-size: 15px;
+}
+.feature-heading{
+  font-size: 60px;
+  
+  text-align: center;
+}
